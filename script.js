@@ -44,7 +44,7 @@ const questions = [
     answers: [
       { text: "دنیای کارتون‌ها!", type: "شوخ‌طبع" },
       { text: "دنیای علمی تخیلی", type: "باهوش" },
-      { text: "دنیای طبیعت و آرامش", type: "آروم" }
+      { text: "دنیای هنر و تخیل", type: "خلاق" }
     ]
   },
   {
@@ -104,13 +104,15 @@ questions.forEach((q, i) => {
 
 submitBtn.addEventListener("click", () => {
   selectedAnswers = [];
+  resultDiv.innerHTML = ""; // پاک کردن نتایج قبلی
+
   questions.forEach((q, i) => {
     const answer = document.querySelector(`input[name="q${i}"]:checked`);
     if (answer) selectedAnswers.push(answer.value);
   });
 
   if (selectedAnswers.length !== questions.length) {
-    resultDiv.innerHTML = "لطفا به همه سوالا جواب بده!";
+    resultDiv.innerHTML = "لطفاً به همه سوال‌ها جواب بده!";
     return;
   }
 
@@ -119,14 +121,20 @@ submitBtn.addEventListener("click", () => {
     count[type] = (count[type] || 0) + 1;
   });
 
-  let finalType = Object.keys(count).reduce((a, b) =>
-    count[a] > count[b] ? a : b
-  );
+  const messages = {
+    "شوخ‌طبع": "تو یه آدم پرانرژی و خنده‌دار هستی! دوستات عاشق شوخی‌هاتن.",
+    "باهوش": "تو باهوش و تحلیلی هستی! همیشه دنبال دلیل و منطق می‌گردی.",
+    "آروم": "تو یه آدم آرام، مهربون و شنوا هستی. بودن باهات لذت‌بخشه.",
+    "خلاق": "تو یه فرد خلاق و خیال‌پرداز هستی که همیشه دنبال ایده‌های نو می‌گردی!"
+  };
 
-  let message = "";
-  if (finalType === "شوخ‌طبع") message = "تو یه آدم پرانرژی و خنده‌دار هستی! دوستات عاشق شوخی‌هاتن.";
-  else if (finalType === "باهوش") message = "تو باهوش و تحلیلی هستی! همیشه دنبال دلیل و منطق می‌گردی.";
-  else if (finalType === "آروم") message = "تو یه آدم آرام، مهربون و شنوا هستی. بودن باهات لذت‌بخشه.";
-
-  resultDiv.innerHTML = `<h2>${message}</h2>`;
+  const sortedTypes = Object.keys(count).sort((a, b) => count[b] - count[a]);
+  sortedTypes.forEach((type) => {
+    if (messages[type]) {
+      const box = document.createElement("div");
+      box.className = "result-box";
+      box.innerText = messages[type];
+      resultDiv.appendChild(box);
+    }
+  });
 });
