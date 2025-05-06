@@ -1,140 +1,133 @@
 const questions = [
-  {
-    question: "اگه گرسنه باشی، اولین چیزی که بهش فکر می‌کنی چیه؟",
-    answers: [
-      { text: "پیتزا", type: "شوخ‌طبع" },
-      { text: "کباب", type: "باهوش" },
-      { text: "سالاد", type: "آروم" }
-    ]
-  },
-  {
-    question: "دوست داری وقت آزادت رو چطور بگذرونی؟",
-    answers: [
-      { text: "خواب!", type: "آروم" },
-      { text: "فیلم دیدن", type: "باهوش" },
-      { text: "بازی کردن", type: "شوخ‌طبع" }
-    ]
-  },
-  {
-    question: "صبح‌ها چطور بیدار می‌شی؟",
-    answers: [
-      { text: "با سه تا آلارم!", type: "شوخ‌طبع" },
-      { text: "بدون آلارم", type: "باهوش" },
-      { text: "اصلاً بیدار نمی‌شم!", type: "آروم" }
-    ]
-  },
-  {
-    question: "اگه یه گربه باهات حرف بزنه، چی کار می‌کنی؟",
-    answers: [
-      { text: "شروع می‌کنم باهاش حرف زدن", type: "شوخ‌طبع" },
-      { text: "می‌رم تحقیق می‌کنم چرا!", type: "باهوش" },
-      { text: "نگاش می‌کنم و می‌خوابم!", type: "آروم" }
-    ]
-  },
-  {
-    question: "بهت بگن بریم مسافرت، چی کار می‌کنی؟",
-    answers: [
-      { text: "همین الان آماده‌ام!", type: "شوخ‌طبع" },
-      { text: "برنامه‌ریزی می‌کنم", type: "باهوش" },
-      { text: "می‌پرسم جا نرم باشه؟", type: "آروم" }
-    ]
-  },
-  {
-    question: "دوست داری تو چه دنیایی زندگی کنی؟",
-    answers: [
-      { text: "دنیای کارتون‌ها!", type: "شوخ‌طبع" },
-      { text: "دنیای علمی تخیلی", type: "باهوش" },
-      { text: "دنیای هنر و تخیل", type: "خلاق" }
-    ]
-  },
-  {
-    question: "اگه یه روز کامل اینترنت قطع باشه؟",
-    answers: [
-      { text: "با خانوادم وقت می‌گذرونم", type: "آروم" },
-      { text: "می‌رم کتاب می‌خونم", type: "باهوش" },
-      { text: "می‌خوابم تا وصل شه", type: "شوخ‌طبع" }
-    ]
-  },
-  {
-    question: "رنگ مورد علاقه‌ات چیه؟",
-    answers: [
-      { text: "زرد روشن", type: "شوخ‌طبع" },
-      { text: "آبی تیره", type: "باهوش" },
-      { text: "سبز ملایم", type: "آروم" }
-    ]
-  },
-  {
-    question: "تو مهمونی معمولاً چطوری هستی؟",
-    answers: [
-      { text: "مرکز توجه!", type: "شوخ‌طبع" },
-      { text: "مشغول بحث‌های عمیق", type: "باهوش" },
-      { text: "یه گوشه ساکت نشستم", type: "آروم" }
-    ]
-  },
-  {
-    question: "یه دوستت ناراحته، چی کار می‌کنی؟",
-    answers: [
-      { text: "با شوخی آرومش می‌کنم", type: "شوخ‌طبع" },
-      { text: "نصیحتش می‌کنم", type: "باهوش" },
-      { text: "بغلش می‌کنم", type: "آروم" }
-    ]
-  }
-];
+    { question: "وقتی تنها هستی، چه کاری بیشتر دوست داری انجام بدهی؟", answers: [
+      { text: "مطالعه یا یادگیری چیزهای جدید", type: "باهوش" },
+      { text: "گوش دادن به موسیقی آرام", type: "آرام" },
+      { text: "طراحی یا نوشتن داستان", type: "خلاق" }
+    ]},
+    { question: "در جمع دوستان معمولاً چطور هستی؟", answers: [
+      { text: "رهبر گروه هستم", type: "رهبر" },
+      { text: "همیشه جو را شاد می‌کنم", type: "انگیزشی" },
+      { text: "دنبال ماجراجویی هستم", type: "ماجراجو" }
+    ]},
+    { question: "در برخورد با چالش‌ها چه واکنشی داری؟", answers: [
+      { text: "تحلیل می‌کنم و راه‌حل منطقی پیدا می‌کنم", type: "باهوش" },
+      { text: "صبور و با آرامش عمل می‌کنم", type: "آرام" },
+      { text: "جسورانه وارد عمل می‌شوم", type: "جسور" }
+    ]},
+    { question: "چه چیزی برایت الهام‌بخش است؟", answers: [
+      { text: "افرادی که باهوش‌اند", type: "باهوش" },
+      { text: "طبیعت و سکوت", type: "آرام" },
+      { text: "داستان‌های موفقیت", type: "انگیزشی" }
+    ]},
+    { question: "نظرت درباره کار تیمی چیست؟", answers: [
+      { text: "دوست دارم رهبری کنم", type: "رهبر" },
+      { text: "در هماهنگی با گروه خوبم", type: "مهربان" },
+      { text: "ترجیح می‌دهم مستقل باشم", type: "خلاق" }
+    ]},
+    { question: "در سفر ترجیح می‌دهی کجا بری؟", answers: [
+      { text: "مناطق ناشناخته و هیجان‌انگیز", type: "ماجراجو" },
+      { text: "جاهای تاریخی و فرهنگی", type: "باهوش" },
+      { text: "جایی آرام و خلوت", type: "آرام" }
+    ]},
+    { question: "در یک پروژه جدید چطور عمل می‌کنی؟", answers: [
+      { text: "ایده‌پردازی می‌کنم", type: "خلاق" },
+      { text: "کارها را به خوبی سازماندهی می‌کنم", type: "رهبر" },
+      { text: "همه را به حرکت درمی‌آورم", type: "انگیزشی" }
+    ]},
+    { question: "چه چیزی تو را خوشحال می‌کند؟", answers: [
+      { text: "دیدن پیشرفت خودم", type: "باهوش" },
+      { text: "بودن با کسانی که دوست‌شان دارم", type: "عاطفی" },
+      { text: "رسیدن به اهداف بزرگ", type: "جسور" }
+    ]},
+    { question: "دوست داری دیگران تو را چگونه توصیف کنند؟", answers: [
+      { text: "باهوش و منطقی", type: "باهوش" },
+      { text: "مهربان و شنونده", type: "مهربان" },
+      { text: "پرشور و مثبت", type: "انگیزشی" }
+    ]},
+    { question: "چه سبک فیلمی را دوست داری؟", answers: [
+      { text: "مستند یا علمی", type: "باهوش" },
+      { text: "درام احساسی", type: "عاطفی" },
+      { text: "اکشن و ماجراجویی", type: "جسور" }
+    ]},
+    { question: "وقتی کسی ناراحته، تو چطور رفتار می‌کنی؟", answers: [
+      { text: "سعی می‌کنم به او انگیزه بدم", type: "انگیزشی" },
+      { text: "با او همدردی می‌کنم", type: "عاطفی" },
+      { text: "تحلیل می‌کنم ببینم مشکل چیه", type: "باهوش" }
+    ]},
+    { question: "کدام جمله بیشتر شبیه توئه؟", answers: [
+      { text: "من عاشق خلق چیزهای جدیدم", type: "خلاق" },
+      { text: "همیشه آماده‌ام برای کشف ناشناخته‌ها", type: "ماجراجو" },
+      { text: "دوست دارم همه خوشحال باشن", type: "مهربان" }
+    ]},
+    { question: "با استرس چطور کنار میای؟", answers: [
+      { text: "نفس عمیق و آرامش", type: "آرام" },
+      { text: "با انگیزه باهاش می‌جنگم", type: "جسور" },
+      { text: "تحلیل می‌کنم که مشکل کجاست", type: "باهوش" }
+    ]},
+    { question: "وقتی وقت آزاد داری، چی کار می‌کنی؟", answers: [
+      { text: "نقاشی یا نویسندگی", type: "خلاق" },
+      { text: "رفتن به مکان‌های جدید", type: "ماجراجو" },
+      { text: "صحبت با دوستان و گوش دادن", type: "عاطفی" }
+    ]},
+    { question: "در زمان سختی به چی تکیه می‌کنی؟", answers: [
+      { text: "خودم و توانایی‌هام", type: "جسور" },
+      { text: "دوستان و خانواده‌م", type: "مهربان" },
+      { text: "آرامشم و تفکر منطقی", type: "آرام" }
+    ]}
+  ];
+  
+  const messages = {
+    "باهوش": "تو فردی باهوش و تحلیل‌گر هستی که همیشه دنبال رشد ذهنی هستی!",
+    "آرام": "تو فردی آرام، باوقار و مثبت‌اندیش هستی که دیگران با تو احساس راحتی می‌کنند.",
+    "خلاق": "تو ذهنی خلاق و هنری داری که همیشه دنبال راه‌حل‌های خاص و نو هستی.",
+    "رهبر": "تو یک رهبر طبیعی هستی که می‌تونه دیگران رو مدیریت کنه و الهام‌بخش باشه.","انگیزشی": "تو پر از انگیزه و انرژی مثبتی که دیگران رو تشویق می‌کنی و لبخند به لب میاری.",
+  "ماجراجو": "تو دنبال هیجان و تجربه‌های جدید هستی و از ناشناخته‌ها نمی‌ترسی.",
+  "عاطفی": "تو قلب مهربونی داری و احساسات دیگران رو عمیقاً درک می‌کنی.",
+  "جسور": "تو شجاع و نترس هستی و جلوی هیچ چیزی کوتاه نمیای.",
+  "مهربان": "تو انسانی دلسوز و مراقب هستی که همیشه هوای دیگران رو داره.",
+  "تحلیل‌گر": "تو همیشه همه چیز رو با دقت بررسی می‌کنی و منطقی تصمیم می‌گیری.",
+  "طنزپرداز": "تو حس شوخ‌طبعی داری و دیگران با تو لحظات شادی رو تجربه می‌کنن.",
+  "کاوشگر": "تو دوست داری دنیا رو بشناسی، یاد بگیری و کشف کنی!"
+};
 
-const quizDiv = document.getElementById("quiz");
-const resultDiv = document.getElementById("result");
-const submitBtn = document.getElementById("submit");
-
-let selectedAnswers = [];
-
-questions.forEach((q, i) => {
+const form = document.getElementById("quizForm");
+questions.forEach((q, index) => {
   const qDiv = document.createElement("div");
-  qDiv.innerHTML = `<h3>${q.question}</h3>`;
-  q.answers.forEach((a, j) => {
-    const label = document.createElement("label");
-    label.innerHTML = `
-      <input type="radio" name="q${i}" value="${a.type}" />
-      ${a.text}
-    `;
-    qDiv.appendChild(label);
-    qDiv.appendChild(document.createElement("br"));
+  qDiv.innerHTML = `<p>${index + 1}. ${q.question}</p>`;
+  q.answers.forEach((a, i) => {
+    const id = `q${index}_a${i}`;
+    qDiv.innerHTML += `
+      <label for="${id}">
+        <input type="radio" id="${id}" name="question${index}" value="${a.type}" />
+        ${a.text}
+      </label><br>`;
   });
-  quizDiv.appendChild(qDiv);
+  form.appendChild(qDiv);
 });
 
-submitBtn.addEventListener("click", () => {
-  selectedAnswers = [];
-  resultDiv.innerHTML = ""; // پاک کردن نتایج قبلی
+document.getElementById("submit").addEventListener("click", () => {
+  const resultCount = {};
+  let allAnswered = true;
 
-  questions.forEach((q, i) => {
-    const answer = document.querySelector(`input[name="q${i}"]:checked`);
-    if (answer) selectedAnswers.push(answer.value);
+  questions.forEach((_, i) => {
+    const selected = document.querySelector(`input[name="question${i}"]:checked`);
+    if (!selected) {
+      allAnswered = false;
+      return;
+    }
+    resultCount[selected.value] = (resultCount[selected.value] || 0) + 1;
   });
 
-  if (selectedAnswers.length !== questions.length) {
-    resultDiv.innerHTML = "لطفاً به همه سوال‌ها جواب بده!";
+  const resultDiv = document.getElementById("result");
+
+  if (!allAnswered) {
+    resultDiv.innerHTML = "<div class='result-box'>لطفاً به همه سوال‌ها جواب بده!</div>";
     return;
   }
 
-  const count = {};
-  selectedAnswers.forEach((type) => {
-    count[type] = (count[type] || 0) + 1;
-  });
+  const max = Math.max(...Object.values(resultCount));
+  const topTypes = Object.keys(resultCount).filter(key => resultCount[key] === max);
+  const finalType = topTypes[Math.floor(Math.random() * topTypes.length)];
 
-  const messages = {
-    "شوخ‌طبع": "تو یه آدم پرانرژی و خنده‌دار هستی! دوستات عاشق شوخی‌هاتن.",
-    "باهوش": "تو باهوش و تحلیلی هستی! همیشه دنبال دلیل و منطق می‌گردی.",
-    "آروم": "تو یه آدم آرام، مهربون و شنوا هستی. بودن باهات لذت‌بخشه.",
-    "خلاق": "تو یه فرد خلاق و خیال‌پرداز هستی که همیشه دنبال ایده‌های نو می‌گردی!"
-  };
-
-  const sortedTypes = Object.keys(count).sort((a, b) => count[b] - count[a]);
-  sortedTypes.forEach((type) => {
-    if (messages[type]) {
-      const box = document.createElement("div");
-      box.className = "result-box";
-      box.innerText = messages[type];
-      resultDiv.appendChild(box);
-    }
-  });
+  resultDiv.innerHTML = `<div class='result-box'>${messages[finalType] || "تو شخصیتی منحصر به فرد داری که قابل توصیف با یک واژه نیست!"}</div>`;
 });

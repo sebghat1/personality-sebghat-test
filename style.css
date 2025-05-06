@@ -1,8 +1,8 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
   direction: rtl;
-  background-color: #f3e5f5; /* صورتی روشن */
-  color: #6a1b9a; /* بنفش تیره */
+  background-color: #f3e5f5;
+  color: #6a1b9a;
   text-align: center;
   padding: 2rem;
 }
@@ -10,14 +10,14 @@ body {
 .container {
   max-width: 600px;
   margin: auto;
-  background-color: #ffffff; /* سفید */
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 button {
-  background-color: #ea80fc; /* صورتی ملایم */
+  background-color: #ea80fc;
   border: none;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -26,16 +26,52 @@ button {
 }
 
 button:hover {
-  background-color: #d500f9; /* بنفش روشن */
+  background-color: #d500f9;
 }
 
 .result-box {
-  background-color: #ea80fc; /* صورتی ملایم */
-  color: white; /* رنگ متن سفید */
+  background-color: #ea80fc;
+  color: white;
   padding: 1.5rem;
   border-radius: 15px;
   margin-top: 2rem;
   font-size: 1.2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.answer {
+  display: block;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}form div p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50; /* رنگ سرمه‌ای ملایم */
+  margin-bottom: 8px;
+}form label {
+  font-size: 18px;
+  color: #43a047; /* رنگ سبز جذاب */
+  display: block;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+form input[type="radio"] {
+  margin-right: 8px;
 }
